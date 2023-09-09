@@ -1,7 +1,21 @@
 """
-Who would've guessed? Doomsday devices take a LOT of power. Commander Lambda wants to supplement the LAMBCHOP's quantum antimatter reactor core with solar arrays, and she's tasked you with setting up the solar panels. Due to the nature of the space station's outer paneling, all of its solar panels must be squares. Fortunately, you have one very large and flat area of solar material, a pair of industrial-strength scissors, and enough MegaCorp Solar Tape(TM) to piece together any excess panel material into more squares. For example, if you had a total area of 12 square yards of solar material, you would be able to make one 3x3 square panel (with a total area of 9). That would leave 3 square yards, so you can turn those into three 1x1 square solar panels.
+Keeping track of Commander Lambda’s many bunny prisoners is starting to get tricky. You’ve been tasked with writing a program to match bunny prisoner IDs to cell locations.
 
-Write a function solution(area) that takes as its input a single unit of measure representing the total area of solar panels you have (between 1 and 1000000 inclusive) and returns a list of the areas of the largest squares you could make out of those panels, starting with the largest squares first. So, following the example above, solution(12) would return [9, 1, 1, 1].
+The LAMBCHOP doomsday device takes up much of the interior of Commander Lambda’s space station, and as a result the prison blocks have an unusual layout. They are stacked in a triangular shape, and the bunny prisoners are given numerical IDs starting from the corner, as follows:
+
+| 7
+
+| 4 8
+
+| 2 5 9
+
+| 1 3 6 10
+
+Each cell can be represented as points (x, y), with x being the distance from the vertical wall, and y being the height from the ground.
+
+For example, the bunny prisoner at (1, 1) has ID 1, the bunny prisoner at (3, 2) has ID 9, and the bunny prisoner at (2,3) has ID 8. This pattern of numbering continues indefinitely (Commander Lambda has been taking a LOT of prisoners).
+
+Write a function solution(x, y) which returns the prisoner ID of the bunny at the location (x, y). Each value of x and y will be at least 1 and no greater than 100,000. Since the prisoner ID can be very large, return your solution as a string representation of the number.
 """
 
 def bunny(x, y):
